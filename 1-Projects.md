@@ -235,7 +235,33 @@ app.UseHttpsRedirection();
 
 1. 通过环境变量设置；
 2. 通过约定名称方法，比如`Configure()`方法和`ConfigureDevelopment()`方法。
-3. 通过约定名称类，比如`StarUpDevelopment`类。注意，需要设置Program.cs文件中的`webBuilder`，将其更改为
+3. 通过约定名称类，比如`StarUpDevelopment`类。注意，需要设置 Program.cs 文件中的`webBuilder`，将其更改为
    ```cs
    webBuilder.UseStartup(typeof(Program));
    ```
+
+## 包管理
+
+### 后端
+
+#### Nuget
+
+### 前端
+
+> 但是实际上手的话前后端分离香一些
+
+#### NPM
+
+1. 添加`package.json`文件（有模板）
+2. 在`devDependencies`中添加包，使用 json 键值对来设置包和版本，比如：
+   ```json
+    "devDependencies": {
+        "aplayer": "1.10.1"
+    }
+   ```
+
+#### LibMan
+
+1. “右键”->“添加”->“添加客户端库”
+2. “提供程序”选择"unpkg"
+3. 搜索、安装，会自动安装到 wwwroot 文件夹
